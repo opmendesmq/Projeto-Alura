@@ -1,0 +1,110 @@
+/* Reset básico de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a fonte Docallisme On Street */
+@font-face {
+    font-family: 'Docallisme On Street';
+    src: url('../fonts/DocallismeOnStreet.woff') format('woff'),
+         url('../fonts/DocallismeOnStreet.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0; /* Texto claro em fundo escuro */
+    background: #3c3c3c; /* Fundo cinza escuro */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: #000; /* Preto sólido para o cabeçalho */
+    color: #ff0000; /* Vermelho vivo para o texto do cabeçalho */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #ff0000; /* Vermelho vivo para o texto */
+    font-family: 'Docallisme On Street', sans-serif; /* Aplicando a fonte personalizada */
+}
+
+main {
+    margin-top: 30px;
+}
+
+.video-card {
+    background: #2c2c2c; /* Cinza escuro */
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Garante que a sombra não exceda o contêiner */
+}
+
+.video-card::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra do vídeo */
+    z-index: -1; /* Faz a sombra ficar atrás do conteúdo */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff; /* Branco para o título */
+    font-weight: 700;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* Proporção 16:9 (9 / 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor do vídeo */
+}
+
+footer {
+    background: #000; /* Preto para o rodapé */
+    color: #ff0000; /* Vermelho vivo para o texto do rodapé */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
